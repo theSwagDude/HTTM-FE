@@ -1,0 +1,38 @@
+.Id {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Id textarea {
+    min-width: 600px;
+    height: 300px;
+    margin-left: 40px;
+}
+
+.Id .imageContainer {
+    width: 45%;
+    margin-right: 40px;
+}
+
+.Id .imageContainer img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.Id .imageContainer .imageUpload {
+    display: block;
+    min-width: 600px;
+    height: 300px;
+    border: 2px dashed #000;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 180px;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.Id .imageContainer .imageUpload input {
+    display: none;
+}
