@@ -24,18 +24,22 @@ function Register() {
                 username: username,
                 email: email,
                 password: password,
+                name: name
             }).then((res) => {
                 console.log(res.data);
 
-                if (res.data.message == "Duplicated email") {
+                if (res.data.message == "email") {
                     alert("Duplicated email");
+                }
+                if (res.data.message == "username") {
+                    alert("Duplicated username");
                 }
                 else if (res.data.message == "Registered sucess") {
 
                     navigate('/login');
                 }
                 else {
-                    alert("Some error occured");
+                    alert("Please fill all fields");
                 }
             }, fail => {
                 console.error(fail);
@@ -83,7 +87,7 @@ function Register() {
 
                     <div class="input-group">
                         <label>Username</label>
-                        <input type="username" class="form-control" id="username"
+                        <input type="text" class="form-control" id="username"
 
                             value={username}
                             onChange={(event) => {
@@ -108,7 +112,7 @@ function Register() {
 
                     <div class="input-group">
                         <label>Confirm Password</label>
-                        <input type="confirmPassword" class="form-control" id="confirmPassword"
+                        <input type="password" class="form-control" id="confirmPassword"
 
                             value={confirmPassword}
                             onChange={(event) => {

@@ -20,7 +20,7 @@ function Login() {
             }).then((res) => {
                 console.log(res.data);
 
-                if (res.data.message == "Email not exits") {
+                if (res.data.message == "email") {
                     alert("Email doesn't exist");
                 }
                 else if (res.data.message == "Login Success") {
@@ -63,7 +63,7 @@ function Login() {
                 <form>
                     <div class="form-group">
                         <div class="input-group">
-                            <label>Username</label>
+                            <label>Email</label>
                             <input type="email" class="form-control" id="email"
 
                                 value={email}
